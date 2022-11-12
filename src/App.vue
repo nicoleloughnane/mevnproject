@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div >
+  <my-header></my-header>
+  <router-view></router-view>
+
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyHeader from './components/MyHeader.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    MyHeader
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+body {
+  margin: 0;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
