@@ -5,6 +5,8 @@
         <h4>{{postBody}}</h4>
         <div class="actions">
           <base-button link :to="postDetailsLink">View Details</base-button>
+          <base-button link :to="editPostLink">Edit Post</base-button>
+          <base-button link :to="deletePostLink">Delete Post</base-button>
         </div>
 
     </li>
@@ -17,6 +19,14 @@ export default {
       postDetailsLink() {
         //uses the current path and adds id of specific post to the route
         return this.$route.path + '/'+ this.id
+      },
+      editPostLink() {
+        //uses the current path and adds id of specific post to the route
+        return this.$route.path + '/edit/'+ this.id
+      },
+      deletePostLink() {
+        //uses the current path and adds id of specific post to the route
+        return this.$route.path + '/delete/'+ this.id
       }
     }
 }

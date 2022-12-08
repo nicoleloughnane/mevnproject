@@ -1,17 +1,17 @@
 <template>
 <div >
-  <my-header></my-header>
+  <my-navbar></my-navbar>
   <router-view></router-view>
 
  </div>
 </template>
 
 <script>
-import MyHeader from './components/MyHeader.vue';
+import MyNavbar from './components/MyNavbar.vue';
 
 export default {
   components: {
-    MyHeader
+    MyNavbar
   }
 }
 </script>

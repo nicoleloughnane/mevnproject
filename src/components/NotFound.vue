@@ -1,14 +1,6 @@
 <template>
     <div >
-      <div >
-        <div >
-          <div >Not Found Component</div>
-   
-          <div >
-            Error 404
-          </div>
-        </div>
-      </div>
+      NOT FOUND
     </div>
     </template>
     <script>

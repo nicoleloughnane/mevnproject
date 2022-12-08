@@ -5,10 +5,10 @@
       <section>
         <base-card>
       <div class="controls">
-        <base-button mode="outline">Refresh</base-button>
         <base-button link to="/create">Add new Post</base-button>
       </div>
       <div class="posts">
+        <div v-if="(posts.length > 0)" >
         <ul>
           <post-item v-for="post in posts"
            :key="post.id"
@@ -17,6 +17,10 @@
            :post-body="post.postBody">
           </post-item>
         </ul>
+      </div> 
+      <div v-else>
+        There are either no posts or our servers are down. 
+      </div>
       </div>
     </base-card>
     </section>
@@ -34,6 +38,7 @@ export default {
   data() {
     return {
       posts: []
+      
     }
   },
   mounted() {
